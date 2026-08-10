@@ -1,0 +1,17 @@
+HI, NOTEPAD NORI HERE, WHY AM I DOING THIS
+
+TODOs:
+- finish the collision code between the ball and the square such that it stays within the square as it moves.
+- finish the update code for the Player class so that it updates per run
+
+GOALs:
+- Get the player class to have the text for its health in the middle as a number
+- Get the player class to have a means of attacking (maybe a "trait" attrib?)
+- Start doing the attacking/dmg/dying mechanics
+- Implement the GUI for adjustments on the fly
+- Compilation into a playable exe file
+
+EXTRA GOALS:
+- more traits
+- more pizzazz
+- more pizza mmmmm

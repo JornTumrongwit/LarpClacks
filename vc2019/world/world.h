@@ -8,7 +8,9 @@ namespace LarpClack {
 		World() {};
 
 		MapTile map;
-		std::vector<Player> players;
+		std::vector<Player*> players;
+
+		void Update();
 
 		void Draw();
 	};

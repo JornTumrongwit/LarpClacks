@@ -2,17 +2,14 @@
 #include "../rect/rect.h"
 #include "cinder/gl/gl.h"
 
-using namespace LarpClack;
+namespace LarpClack{
+	bool CollisionCheck(Circle circle1, Circle circle2);
+	bool CollisionCheck(Rect square1, Rect square2);
+	bool CollisionCheck(Rect square, Circle circle);
+	bool CollisionCheck(Circle circle, Rect square) {
+		CollisionCheck(square, circle);
+	}
 
-bool Collide(Circle circle1, Circle circle2) {
-	
+	//Square contains circle
+	bool Contains(Rect square, Circle circle);
 }
-
-bool Collide(Rect square, Circle circle);
-bool Collide(Rect square1, Rect square2);
-bool Collide(Circle circle, Rect square) {
-	Collide(square, circle);
-}
-
-//Square contains circle
-bool Contains(Rect square, Circle circle);
