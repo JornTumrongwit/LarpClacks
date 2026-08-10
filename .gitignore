@@ -1,0 +1,63 @@
+## Added by GitHub for Visual Studio project types
+## =============================================
+
+# Prerequisites
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Compiled Object files
+*.obj
+*.o
+*.lib
+*.spec
+*.gch
+
+# Compiled Dynamic libraries
+*.dll
+*.so
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Cache, Intellisense, and System Files
+.vs/
+Generated_Files/
+_Changelist2.txt
+*.ncb
+*.sdf
+*.opensdf
+*.implib
+*.map
+*.pdb
+*.ilk
+*.exp
+
+# Visual Studio Build Folders
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+x64/
+x86/
+ARM/
+ARM64/
+build/
+bin/
+
+# Intermediate files generated during builds
+*.tlog
+*.lastbuildstate
+*.idb
+
+# CMake outputs (if you switch from msbuild later)
+/CMakeSettings.json
+/CMakeUserPresets.json
+/out/
+
+# Cinder Block Assets or local logs (Optional but recommended)
+*.log
+.DS_Store

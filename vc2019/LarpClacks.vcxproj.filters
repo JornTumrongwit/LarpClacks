@@ -12,6 +12,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
+    <Filter Include="map_block">
+      <UniqueIdentifier>{ee6d8997-b0ef-429e-b67a-03b483dab50d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="collisions">
+      <UniqueIdentifier>{291e03f4-9645-4de9-95fd-10629a0c172d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="circle">
+      <UniqueIdentifier>{452f7d1b-ef7a-4f69-85b0-1b26f71e29a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rect">
+      <UniqueIdentifier>{0fe85e79-ebe8-41b4-82b6-4a5b9da4f10c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shape">
+      <UniqueIdentifier>{ad944651-abac-414b-b99a-303cd9a9dce7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player">
+      <UniqueIdentifier>{40475da6-969f-442f-a677-adf3b10bcf4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="world">
+      <UniqueIdentifier>{19220250-a409-4607-8f83-17175c032d21}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\LarpClacksApp.cpp">
@@ -23,10 +44,49 @@
     <ClInclude Include="..\include\Resources.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClCompile Include="maps\map_block.cpp">
+      <Filter>map_block</Filter>
+    </ClCompile>
+    <ClCompile Include="collisions\collisions.cpp">
+      <Filter>collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="circle\circle.cpp">
+      <Filter>circle</Filter>
+    </ClCompile>
+    <ClCompile Include="rect\rect.cpp">
+      <Filter>rect</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player.cpp">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="world\world.cpp">
+      <Filter>world</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="maps\map_block.h">
+      <Filter>map_block</Filter>
+    </ClInclude>
+    <ClInclude Include="collisions\collisions.h">
+      <Filter>collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="circle\circle.h">
+      <Filter>circle</Filter>
+    </ClInclude>
+    <ClInclude Include="rect\rect.h">
+      <Filter>rect</Filter>
+    </ClInclude>
+    <ClInclude Include="shape\shape.h">
+      <Filter>shape</Filter>
+    </ClInclude>
+    <ClInclude Include="player\player.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="world\world.h">
+      <Filter>world</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
