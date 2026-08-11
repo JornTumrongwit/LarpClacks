@@ -10,14 +10,19 @@ namespace LarpClack {
 		float latest_time = 0.0f;
 		int player_index = 0;
 
+		MapTile map;
+		std::map<int, std::unique_ptr<Player>> players;
+
 	public:
 		World() {};
 		World(ci::app::App* app) { this->app = app; };
 
-		MapTile map;
-		std::map<int, std::unique_ptr<Player>> players;
-
-		void AddPlayer(ci::vec2& center, float radius, ci::Color& color, ci::Color& outline_col, float outline_size);
+		void AddMap(ci::vec2& center, float size,
+			ci::Color& color,
+			ci::Color& outline_col, float outline_size);
+		void AddPlayer(ci::vec2& center, float radius, 
+			ci::Color& color, 
+			ci::Color& outline_col, float outline_size);
 		void Update();
 
 		void Draw();

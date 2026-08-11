@@ -36,9 +36,9 @@ void LarpClacksApp::setup()
     world = World(this);
 
     //placing the map tile
-    world.map = MapTile(centerPoint, min(dimensions.x, dimensions.y)*0.8);
-    world.map.SetColor(ci::Color(255.0 / 255, 255.0 / 255, 230.0 / 255));
-    world.map.SetOutline(ci::Color(0, 0, 0.3), 30);
+    world.AddMap(centerPoint, min(dimensions.x, dimensions.y) * 0.8,
+        ci::Color(255.0 / 255, 255.0 / 255, 230.0 / 255),
+        ci::Color(0, 0, 0.3), 30);
 
     //dummy player
     world.AddPlayer(centerPoint, 30,
