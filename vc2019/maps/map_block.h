@@ -1,3 +1,5 @@
+#pragma once
+
 #include "cinder/gl/gl.h"
 #include "../rect/rect.h"
 

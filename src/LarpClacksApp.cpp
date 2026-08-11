@@ -41,7 +41,7 @@ void LarpClacksApp::setup()
         ci::Color(0, 0, 0.3), 30);
 
     //dummy player
-    world.AddPlayer(centerPoint, 30,
+    world.AddPlayer(centerPoint, 150,
         ci::Color(255.0 / 255, 0 / 255, 0 / 255),
         ci::Color(0, 0, 0), 3);
 

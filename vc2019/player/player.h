@@ -8,7 +8,7 @@ namespace LarpClack {
     class Player : public Circle {
     private:
         World* world = nullptr;
-        float velocity = 100.0;
+        float velocity = 400.0;
         ci::vec2 direction;
 
     public:

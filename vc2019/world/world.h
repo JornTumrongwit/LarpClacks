@@ -24,6 +24,8 @@ namespace LarpClack {
 			ci::Color& color, 
 			ci::Color& outline_col, float outline_size);
 
+		inline MapTile GetMap() { return map; }
+
 		void Update();
 
 		void Draw();

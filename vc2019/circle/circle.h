@@ -1,3 +1,4 @@
+#pragma once
 #include "cinder/gl/gl.h"
 #include "shape/shape.h"
 
