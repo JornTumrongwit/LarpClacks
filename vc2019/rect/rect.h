@@ -10,10 +10,10 @@ namespace LarpClack {
 
 	public:
 		Rect() : ci::Rectf() {};
-		Rect(double x1, double y1, double x2, double y2) : ci::Rectf(x1, y1, x2, y2) {
+		Rect(float x1, float y1, float x2, float y2) : ci::Rectf(x1, y1, x2, y2) {
 		};
 
-		void SetOutline(ci::Color outline, double outline_size) { 
+		void SetOutline(ci::Color outline, float outline_size) {
 			this->outline_col = outline; 
 			this->outline_size = outline_size; 
 		}

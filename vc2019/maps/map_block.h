@@ -5,6 +5,6 @@ namespace LarpClack {
 	class MapTile: public Rect {
 	public:
 		MapTile() {}
-		MapTile(ci::vec2 center, double size);
+		MapTile(ci::vec2 center, float size);
 	};
 }

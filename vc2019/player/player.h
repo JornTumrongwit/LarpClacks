@@ -8,7 +8,7 @@ namespace LarpClack {
     class Player : public Circle {
     private:
         World* world = nullptr;
-        double   velocity = 10.0;
+        float velocity = 100.0;
         ci::vec2 direction;
 
     public:
@@ -22,19 +22,19 @@ namespace LarpClack {
             this->world = world;
         }
 
-        Player(ci::vec2 center, double radius)
+        Player(ci::vec2 center, float radius)
             : Circle(center, radius) 
         {
             direction = ci::randVec2();
         }
 
-        Player(ci::vec2 center, double radius, World* world)
+        Player(ci::vec2 center, float radius, World* world)
             : Circle(center, radius)
         {
             this->world = world;
             direction = ci::randVec2();
         }
 
-        void update();
+        void update(float deltatime);
     };
 }

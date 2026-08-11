@@ -12,7 +12,7 @@ namespace LarpClack {
 
     public:
         Circle() {};
-        Circle(ci::vec2 c, double r)
+        Circle(ci::vec2 c, float r)
             : center(c), radius(r) {
         }
 
@@ -20,7 +20,7 @@ namespace LarpClack {
             this->color = color;
         }
 
-        void SetOutline(ci::Color outline_col, double outline_size) {
+        void SetOutline(ci::Color outline_col, float outline_size) {
             this->outline_col = outline_col;
             this->outline_size = outline_size;
         }

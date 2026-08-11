@@ -23,8 +23,11 @@ namespace LarpClack {
 		void AddPlayer(ci::vec2& center, float radius, 
 			ci::Color& color, 
 			ci::Color& outline_col, float outline_size);
+
 		void Update();
 
 		void Draw();
+
+		inline void SetTime() { latest_time = app->getElapsedSeconds(); }
 	};
 }

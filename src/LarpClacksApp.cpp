@@ -59,6 +59,7 @@ void LarpClacksApp::mouseDown( MouseEvent event )
 
 void LarpClacksApp::update()
 {
+    world.Update();
 }
 
 void LarpClacksApp::draw()

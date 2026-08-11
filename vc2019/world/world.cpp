@@ -16,7 +16,11 @@ namespace LarpClack {
 	}
 
 	void World::Update() {
-		//for (Player* player : players) player->update();
+		double current_time = app->getElapsedSeconds();
+		double deltatime = current_time - latest_time;
+		latest_time = current_time;
+
+		for (auto& [id, player] : players) player->update(deltatime);
 	}
 
 	void World::Draw() {

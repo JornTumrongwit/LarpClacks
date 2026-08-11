@@ -1,7 +1,7 @@
 #include "map_block.h"
 
 namespace LarpClack {
-	MapTile::MapTile(ci::vec2 center, double size) {
+	MapTile::MapTile(ci::vec2 center, float size) {
         float halfSize = static_cast<float>(size) * 0.5f;
 
         this->x1 = center.x - halfSize; // Left
