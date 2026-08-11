@@ -33,17 +33,17 @@ void LarpClacksApp::setup()
     ci::vec2 dimensions = getWindowSize();
 
     //setting up the game world
-    
+    world = World(this);
+
     //placing the map tile
     world.map = MapTile(centerPoint, min(dimensions.x, dimensions.y)*0.8);
     world.map.SetColor(ci::Color(255.0 / 255, 255.0 / 255, 230.0 / 255));
     world.map.SetOutline(ci::Color(0, 0, 0.3), 30);
 
     //dummy player
-    Player play(centerPoint, 30, &world);
-    play.SetColor(ci::Color(255.0 / 255, 0 / 255, 0 / 255));
-    play.SetOutline(ci::Color(0, 0, 0), 3);
-    world.players.push_back(&play);
+    world.AddPlayer(centerPoint, 30,
+        ci::Color(255.0 / 255, 0 / 255, 0 / 255),
+        ci::Color(0, 0, 0), 3);
 
     // Enable smooth line blending
     ci::gl::enable(GL_LINE_SMOOTH);
