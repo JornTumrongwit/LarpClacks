@@ -33,6 +33,9 @@
     <Filter Include="world">
       <UniqueIdentifier>{19220250-a409-4607-8f83-17175c032d21}</UniqueIdentifier>
     </Filter>
+    <Filter Include="player\suicidal">
+      <UniqueIdentifier>{65eb4cfd-1907-4b87-960f-5da593259c2e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\LarpClacksApp.cpp">
@@ -62,6 +65,9 @@
     <ClCompile Include="world\world.cpp">
       <Filter>world</Filter>
     </ClCompile>
+    <ClCompile Include="player\suicidal\suicidal.cpp">
+      <Filter>player\suicidal</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -87,6 +93,9 @@
     </ClInclude>
     <ClInclude Include="world\world.h">
       <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="player\suicidal\suicidal.h">
+      <Filter>player\suicidal</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

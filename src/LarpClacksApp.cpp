@@ -2,6 +2,7 @@
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 #include "world/world.h"
+#include "player/suicidal/suicidal.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -41,7 +42,7 @@ void LarpClacksApp::setup()
         ci::Color(0, 0, 0.3), 30);
 
     //dummy player
-    world.AddPlayer(centerPoint, 150,
+    world.AddPlayer<SuicideBall>(centerPoint, 100,
         ci::Color(255.0 / 255, 0 / 255, 0 / 255),
         ci::Color(0, 0, 0), 3);
 

@@ -4,9 +4,8 @@
 #include "world/world.h"
 
 namespace LarpClack {
-	void Player::update(float deltatime) {
+	void Player::Update(float deltatime) {
 		center += direction * velocity * deltatime;
-		radius += 100 * deltatime;
 		//check this player ball against the map. If it hits a map wall, bounce the ball
 		MapTile map = world->GetMap();
 		Collision collision = CollisionsContain(&map, this);
@@ -14,5 +13,25 @@ namespace LarpClack {
 			direction = Reflect(direction, collision.norm);
 			center -= collision.pen_depth;
 		}
+	}
+
+	void Player::Draw() {
+		Circle::Draw();
+		ci::gl::drawStringCentered(
+			std::to_string(int(this->hp)),
+			center,
+			ci::Color(0, 0, 0),
+			world->font
+		);
+	}
+
+	void Player::DrawWithOutline() {
+		Circle::DrawWithOutline();
+		ci::gl::drawStringCentered(
+			std::to_string(int(this->hp)),
+			center,
+			ci::Color(0, 0, 0),
+			world->font
+		);
 	}
 }
