@@ -4,15 +4,18 @@
 #include "world/world.h"
 
 namespace LarpClack {
-	void Player::Update(float deltatime) {
+	void Player::UpdateMap(float deltatime) {
 		center += direction * velocity * deltatime;
 		//check this player ball against the map. If it hits a map wall, bounce the ball
 		MapTile map = world->GetMap();
 		Collision collision = CollisionsContain(&map, this);
 		if (collision.collide) {
-			direction = Reflect(direction, collision.norm);
+			ReflectSelf(collision.norm);
 			center -= collision.pen_depth;
 		}
+
+		//check this player ball against another player. If it hits another player, bounce
+
 	}
 
 	void Player::Draw() {

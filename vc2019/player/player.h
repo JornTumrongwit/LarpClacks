@@ -8,7 +8,7 @@ namespace LarpClack {
     class Player : public Circle {
     protected:
         World* world = nullptr;
-        float velocity = 400.0;
+        float velocity = 800.0;
         float hp = 5;
         ci::vec2 direction;
 
@@ -36,14 +36,26 @@ namespace LarpClack {
             direction = ci::randVec2();
         }
 
-        virtual void Update(float deltatime);
+        virtual void UpdateMap(float deltatime);
 
         virtual void Draw();
 
         virtual void DrawWithOutline();
 
+        virtual void TakeDamage(float damage) { hp -= damage; }
+
+        virtual void ReflectSelf(ci::vec2 normal) { direction = Reflect(direction, normal); }
+
         void SetHP(float hp) { this->hp = hp; }
 
         virtual bool IsDead() { return hp <= 0; }
+
+        //how this ball should interact with the other ball
+        virtual void InteractWith(Player* other) {};
+
+        virtual ci::vec2 GetDirection() { return direction; }
+
+        void SetDirection(ci::vec2 dir) { direction = dir; }
+        void SetCenter(ci::vec2 center) { this->center = center; }
     };
 }

@@ -23,6 +23,8 @@ namespace LarpClack {
             direction = ci::randVec2();
         }
 
-		void Update(float deltatime);
+		void UpdateMap(float deltatime);
+
+        void InteractWith(Player* other);
 	};
 }

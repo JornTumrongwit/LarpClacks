@@ -12,10 +12,24 @@ namespace LarpClack {
 		double deltatime = current_time - latest_time;
 		latest_time = current_time;
 
+		//player - player interactions
+		for (auto it1 = players.begin(); it1 != players.end(); ++it1) {
+
+			for (auto it2 = std::next(it1); it2 != players.end(); ++it2) {
+
+				Player* player1 = it1->second.get();
+				Player* player2 = it2->second.get();
+
+				// Interaction between player1 and player2
+				player1->InteractWith(player2);
+			}
+		}
+
+		//player - map interactions + death check
 		for (auto it = players.begin(); it != players.end(); ) {
 			auto& player = it->second;
 
-			player->Update(deltatime);
+			player->UpdateMap(deltatime);
 
 			if (player->IsDead()) {
 				it = players.erase(it);
