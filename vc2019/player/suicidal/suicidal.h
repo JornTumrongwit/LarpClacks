@@ -2,6 +2,8 @@
 
 namespace LarpClack {
 	class SuicideBall : public Player {
+    private:
+        bool hitFlag = false;
 	public:
 		SuicideBall() : Player() {}
         SuicideBall(World* world)
@@ -23,8 +25,11 @@ namespace LarpClack {
             direction = ci::randVec2();
         }
 
+        void Update(float deltatime);
 		void UpdateMap(float deltatime);
 
-        void InteractWith(Player* other);
+        bool InteractWith(Player* other);
+
+        void Attack(Player* other);
 	};
 }

@@ -36,6 +36,9 @@
     <Filter Include="player\suicidal">
       <UniqueIdentifier>{65eb4cfd-1907-4b87-960f-5da593259c2e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="player\whacker">
+      <UniqueIdentifier>{2a956808-bb3f-4c6d-875f-25a83181826f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\LarpClacksApp.cpp">
@@ -68,6 +71,9 @@
     <ClCompile Include="player\suicidal\suicidal.cpp">
       <Filter>player\suicidal</Filter>
     </ClCompile>
+    <ClCompile Include="player\whacker\whacker.cpp">
+      <Filter>player\whacker</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -96,6 +102,9 @@
     </ClInclude>
     <ClInclude Include="player\suicidal\suicidal.h">
       <Filter>player\suicidal</Filter>
+    </ClInclude>
+    <ClInclude Include="player\whacker\whacker.h">
+      <Filter>player\whacker</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

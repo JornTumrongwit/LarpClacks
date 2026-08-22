@@ -38,6 +38,8 @@ namespace LarpClack {
 
         virtual void UpdateMap(float deltatime);
 
+        virtual void Update(float deltatime) {};
+
         virtual void Draw();
 
         virtual void DrawWithOutline();
@@ -51,7 +53,10 @@ namespace LarpClack {
         virtual bool IsDead() { return hp <= 0; }
 
         //how this ball should interact with the other ball
-        virtual void InteractWith(Player* other) {};
+        virtual bool InteractWith(Player* other);
+
+        //attack checking
+        virtual void Attack(Player* other) {};
 
         virtual ci::vec2 GetDirection() { return direction; }
 

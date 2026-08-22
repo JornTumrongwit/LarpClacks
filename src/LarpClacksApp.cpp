@@ -3,6 +3,7 @@
 #include "cinder/gl/gl.h"
 #include "world/world.h"
 #include "player/suicidal/suicidal.h"
+#include "player/whacker/whacker.h"
 #include "cinder/Rand.h"
 
 using namespace ci;
@@ -42,14 +43,21 @@ void LarpClacksApp::setup()
         ci::Color(255.0 / 255, 255.0 / 255, 230.0 / 255),
         ci::Color(0, 0, 0.3), 30);
 
-    for (int i = 0; i < 2; i++) {
-        ci::vec2 adjust = ci::randVec2();
-        float value = ci::Rand::randFloat(100);
-        //dummy player
-        world.AddPlayer<SuicideBall>(centerPoint + adjust * value, 100,
-            ci::Color(255.0 / 255, 0 / 255, 0 / 255),
-            ci::Color(0, 0, 0), 3);
-    }
+    //for (int i = 0; i < 2; i++) {
+    ci::vec2 adjust = ci::randVec2();
+    float value = ci::Rand::randFloat(100);
+    //dummy player
+    world.AddPlayer<SuicideBall>(centerPoint + adjust * value, 100,
+        ci::Color(255.0 / 255, 0 / 255, 0 / 255),
+        ci::Color(0, 0, 0), 3);
+
+    adjust = ci::randVec2();
+    value = ci::Rand::randFloat(100);
+    //dummy player
+    world.AddPlayer<WhackBall>(centerPoint + adjust * value, 100,
+        ci::Color(0, 1, 0),
+        ci::Color(0, 0, 0), 3);
+    //}
 
     // Enable smooth line blending
     ci::gl::enable(GL_LINE_SMOOTH);

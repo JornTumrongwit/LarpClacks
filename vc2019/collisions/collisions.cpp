@@ -79,4 +79,40 @@ namespace LarpClack {
             depth
         };
     }
+
+    Collision CollisionCheck(Rect* rect, Circle* circle)
+    {
+        ci::vec2 center = circle->GetCenter();
+        float radius = circle->GetRadius();
+
+        float closestX = ci::math<float>::clamp(
+            center.x,
+            rect->x1,
+            rect->x2
+        );
+
+        float closestY = ci::math<float>::clamp(
+            center.y,
+            rect->y1,
+            rect->y2
+        );
+
+        ci::vec2 difference = center - ci::vec2(closestX, closestY);
+
+        float distanceSquared = ci::length2(difference);
+
+        if (distanceSquared > radius * radius)
+            return Collision{
+                false,
+                ci::vec2(0),
+                ci::vec2(0)
+        };
+
+        // Collision
+        return Collision{
+            true,
+            ci::normalize(difference),
+            ci::vec2(0)
+        };
+    }
 }

@@ -111,6 +111,7 @@
     <ClCompile Include="maps\map_block.cpp" />
     <ClCompile Include="player\player.cpp" />
     <ClCompile Include="player\suicidal\suicidal.cpp" />
+    <ClCompile Include="player\whacker\whacker.cpp" />
     <ClCompile Include="rect\rect.cpp" />
     <ClCompile Include="world\world.cpp" />
   </ItemGroup>
@@ -121,6 +122,7 @@
     <ClInclude Include="maps\map_block.h" />
     <ClInclude Include="player\player.h" />
     <ClInclude Include="player\suicidal\suicidal.h" />
+    <ClInclude Include="player\whacker\whacker.h" />
     <ClInclude Include="rect\rect.h" />
     <ClInclude Include="shape\shape.h" />
     <ClInclude Include="world\world.h" />

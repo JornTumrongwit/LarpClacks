@@ -7,37 +7,40 @@ namespace LarpClack {
 		this->map.SetOutline(ci::Color(0, 0, 0.3), 30);
 	}
 
-	void World::Update() {
-		double current_time = app->getElapsedSeconds();
-		double deltatime = current_time - latest_time;
-		latest_time = current_time;
+    void World::Update()
+    {
+        double current_time = app->getElapsedSeconds();
+        double deltatime = current_time - latest_time;
+        latest_time = current_time;
 
-		//player - player interactions
-		for (auto it1 = players.begin(); it1 != players.end(); ++it1) {
+        // Update players
+        for (auto& [id, player] : players) {
+            player->UpdateMap(deltatime);
+            player->Update(deltatime);
+        }
 
-			for (auto it2 = std::next(it1); it2 != players.end(); ++it2) {
+        // Player-player interactions
+        for (auto it1 = players.begin(); it1 != players.end(); ++it1) {
+            for (auto it2 = std::next(it1); it2 != players.end(); ++it2) {
 
-				Player* player1 = it1->second.get();
-				Player* player2 = it2->second.get();
+                Player* player1 = it1->second.get();
+                Player* player2 = it2->second.get();
 
-				// Interaction between player1 and player2
-				player1->InteractWith(player2);
-			}
-		}
+                player1->InteractWith(player2);
+                player1->Attack(player2);
+                player2->Attack(player1);
+            }
+        }
 
-		//player - map interactions + death check
-		for (auto it = players.begin(); it != players.end(); ) {
-			auto& player = it->second;
-
-			player->UpdateMap(deltatime);
-
-			if (player->IsDead()) {
-				it = players.erase(it);
-			}
-			else {
-				++it;
-			}
-		}
+        for (auto it = players.begin(); it != players.end(); ) {
+            auto& player = it->second;
+            if (player->IsDead()) {
+                it = players.erase(it);
+            }
+            else {
+                ++it;
+            }
+        }
 	}
 
 	void World::Draw() {
